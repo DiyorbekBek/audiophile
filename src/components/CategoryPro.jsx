@@ -32,7 +32,7 @@ function CategoryPro() {
             SPEAKERS
           </h3>
           <Link
-            to="/speaker"
+            to="/speakers"
             onClick={() => window.scrollTo({ top: top, behavior: "smooth" })}
             className="flex items-center pb-[22px] text-sm tracking-[1px] font-[Manrope] uppercase opacity-50 mt-4 font-bold gap-2"
           >

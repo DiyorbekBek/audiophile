@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="bg-black pb-14">
+    <div className="bg-black ">
       <header className="max-container flex items-center justify-between py-8 border-b-[1px] border-b-gray-600">
         <button className="md:hidden text-xl text-white">
           <FiAlignJustify className="text-xl text-white" />
@@ -18,22 +18,34 @@ function NavBar() {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8 text-white">
             <li>
-              <Link className="text-[13px] font-bold tracking-[2px] font-[Manrope]  hover:text-[#D87D4A] duration-300">
+              <Link
+                to="/"
+                className="text-[13px] font-bold tracking-[2px] font-[Manrope]  hover:text-[#D87D4A] duration-300"
+              >
                 HOME
               </Link>
             </li>
             <li>
-              <Link className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300">
+              <Link
+                to="/headphones"
+                className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300"
+              >
                 HEADPHONES
               </Link>
             </li>
             <li>
-              <Link className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300">
+              <Link
+                to="/speakers"
+                className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300"
+              >
                 SPEAKERS
               </Link>
             </li>
             <li>
-              <Link className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300">
+              <Link
+                to="/earphones"
+                className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300"
+              >
                 EARPHONES
               </Link>
             </li>

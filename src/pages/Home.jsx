@@ -20,9 +20,12 @@ function Home() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <button className="py-[15px] font-[Manrope] text-xs md:text-xl tracking-[1px] px-[29px] bg-[#D87D4A] hover:bg-[#4C4C4C] duration-300 text-white uppercase">
+            <Link
+              to={`/mark2/${"xx99-mark-two-headphones"}`}
+              className="py-[15px] font-[Manrope] text-xs md:text-xl tracking-[1px] px-[29px] bg-[#D87D4A] hover:bg-[#4C4C4C] duration-300 text-white uppercase"
+            >
               See Product
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -55,7 +58,7 @@ function Home() {
               SPEAKERS
             </h3>
             <Link
-              to="/speaker"
+              to="/speakers"
               onClick={() => window.scrollTo({ top: top, behavior: "smooth" })}
               className="flex items-center pb-[22px] text-sm tracking-[1px] font-[Manrope] uppercase opacity-50 mt-4 font-bold gap-2"
             >
@@ -103,7 +106,11 @@ function Home() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Link className="py-[15px] font-[Manrope] text-xs md:text-xl tracking-[1px] px-[29px] bg-black hover:bg-zinc-700 duration-300 text-white uppercase">
+          <Link
+            to={`/mark2/${"zx9-speaker"}`}
+            onClick={() => window.scrollTo({ top: top, behavior: "smooth" })}
+            className="py-[15px] font-[Manrope] text-xs md:text-xl tracking-[1px] px-[29px] bg-black hover:bg-zinc-700 duration-300 text-white uppercase"
+          >
             See Product
           </Link>
         </div>
