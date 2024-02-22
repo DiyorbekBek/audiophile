@@ -1,4 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+
+import { store } from "./redux/app/store";
+
 import RootLayout from "./layouts/RootLayout";
 // pages
 import Home from "./pages/Home";
@@ -36,9 +40,9 @@ function App() {
     },
   ]);
   return (
-    <>
+    <Provider store={store}>
       <RouterProvider router={routest} />
-    </>
+    </Provider>
   );
 }
 

@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addProduct } from "../redux/features/basket/basketSlice";
 
 async function getData(url) {
   const req = await fetch(url);
@@ -8,6 +10,8 @@ async function getData(url) {
 }
 
 function Mark2() {
+  const { total, allProduct } = useSelector((store) => store.products);
+  const dispatch = useDispatch();
   const { slug } = useParams();
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -23,6 +27,7 @@ function Mark2() {
 
     fetchData();
   }, [slug]);
+
   console.log(data);
   return (
     <>
@@ -59,9 +64,14 @@ function Mark2() {
                       <div className="flex items-center bg-[#F1F1F1]">
                         <button className="p-[11px] md:p-4">-</button>
                         <span className="text-sm md:text-base font-bold">
-                          0
+                          {total}
                         </span>
-                        <button className="p-[11px] md:p-4">+</button>
+                        <button
+                          onClick={() => dispatch(addProduct(item))}
+                          className="p-[11px] md:p-4"
+                        >
+                          +
+                        </button>
                       </div>
                       <button className="py-[15px] font-[Manrope] text-xs md:text-xl tracking-[1px] px-[29px] bg-[#D87D4A] hover:bg-[#4C4C4C] duration-300 text-white uppercase">
                         Add to Cart
