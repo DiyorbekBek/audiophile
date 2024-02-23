@@ -121,9 +121,13 @@ function Home() {
           <h1 className="text-3xl md:text-4xl md:tracking-[2px] md:relative md:left-40 font-[Manrope] font-bold mb-8">
             ZX7 SPEAKER
           </h1>
-          <button className="py-[15px] md:relative md:left-40 font-[Manrope] font-bold text-xs md:text-xl tracking-[1px] px-[29px] bg-inherit hover:bg-black hover:text-white duration-300 text-black border border-black uppercase">
+          <Link
+            to={`/mark2/${"zx7-speaker"}`}
+            onClick={() => window.scrollTo({ top: top, behavior: "smooth" })}
+            className="py-[15px] md:relative md:left-40 font-[Manrope] font-bold text-xs md:text-xl tracking-[1px] px-[29px] bg-inherit hover:bg-black hover:text-white duration-300 text-black border border-black uppercase"
+          >
             See Product
-          </button>
+          </Link>
         </div>
       </section>
       <section className="max-container flex flex-col items-center gap-6 md:flex-row md:justify-between">
@@ -132,9 +136,13 @@ function Home() {
           <h1 className="text-3xl md:text-4xl md:tracking-[2px]  font-[Manrope] font-bold my-8">
             YX1 EARPHONES
           </h1>
-          <button className="py-[15px]  font-[Manrope] font-bold text-xs md:text-xl tracking-[1px] px-[29px] bg-inherit hover:bg-black hover:text-white duration-300 text-black border border-black uppercase">
+          <Link
+            to={`/mark2/${"yx1-earphones"}`}
+            onClick={() => window.scrollTo({ top: top, behavior: "smooth" })}
+            className="py-[15px] md:relative  font-[Manrope] font-bold text-xs md:text-xl tracking-[1px] px-[29px] bg-inherit hover:bg-black hover:text-white duration-300 text-black border border-black uppercase"
+          >
             See Product
-          </button>
+          </Link>
         </div>
       </section>
     </>
