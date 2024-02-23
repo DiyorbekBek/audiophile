@@ -10,9 +10,11 @@ const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    addProduct: (state, { payload }) => {
-      state.allProduct.push({ payload });
-      console.log(state.allProduct);
+    increment: (state, { payload }) => {
+      state.total += payload;
+    },
+    decrement: (state, { payload }) => {
+      state.total -= payload;
     },
 
     // addToCard: (state, { payload }) => {
@@ -45,4 +47,4 @@ const productSlice = createSlice({
 });
 
 export default productSlice.reducer;
-export const { addProduct } = productSlice.actions;
+export const { increment, decrement } = productSlice.actions;

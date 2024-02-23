@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addProduct } from "../redux/features/basket/basketSlice";
+import { increment, decrement } from "../redux/features/basket/basketSlice";
 
 async function getData(url) {
   const req = await fetch(url);
@@ -10,7 +10,7 @@ async function getData(url) {
 }
 
 function Mark2() {
-  const { total, allProduct } = useSelector((store) => store.products);
+  const { total } = useSelector((store) => store.products);
   const dispatch = useDispatch();
   const { slug } = useParams();
   const [data, setData] = useState([]);
@@ -34,7 +34,8 @@ function Mark2() {
       <section className="max-container flex flex-col py-6">
         {data &&
           data.map((item) => {
-            console.log(item.categoryImage.mobile);
+            // dispatch(addProduct({ item }));
+            console.log(item);
             return (
               <div key={item.id}>
                 <div className="flex flex-col items-center md:flex-row md:justify-between">
@@ -62,12 +63,17 @@ function Mark2() {
                     </span>
                     <div className="flex items-center justify-center gap-4 mb-[88px]">
                       <div className="flex items-center bg-[#F1F1F1]">
-                        <button className="p-[11px] md:p-4">-</button>
+                        <button
+                          onClick={() => dispatch(decrement(1))}
+                          className="p-[11px] md:p-4"
+                        >
+                          -
+                        </button>
                         <span className="text-sm md:text-base font-bold">
                           {total}
                         </span>
                         <button
-                          onClick={() => dispatch(addProduct(item))}
+                          onClick={() => dispatch(increment(1))}
                           className="p-[11px] md:p-4"
                         >
                           +

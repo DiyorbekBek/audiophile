@@ -38,6 +38,9 @@ function Footer() {
             <li>
               <Link
                 to="/headphones"
+                onClick={() =>
+                  window.scrollTo({ top: top, behavior: "smooth" })
+                }
                 className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300"
               >
                 HEADPHONES
@@ -45,7 +48,10 @@ function Footer() {
             </li>
             <li>
               <Link
-                to="/speaker"
+                to="/speakers"
+                onClick={() =>
+                  window.scrollTo({ top: top, behavior: "smooth" })
+                }
                 className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300"
               >
                 SPEAKERS
@@ -54,6 +60,9 @@ function Footer() {
             <li>
               <Link
                 to="/earphones"
+                onClick={() =>
+                  window.scrollTo({ top: top, behavior: "smooth" })
+                }
                 className="text-[13px] font-bold tracking-[2px] font-[Manrope] hover:text-[#D87D4A] duration-300"
               >
                 EARPHONES

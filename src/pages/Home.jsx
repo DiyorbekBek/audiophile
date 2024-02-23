@@ -22,6 +22,7 @@ function Home() {
             </p>
             <Link
               to={`/mark2/${"xx99-mark-two-headphones"}`}
+              onClick={() => dispatch(addProduct({ ...data }))}
               className="py-[15px] font-[Manrope] text-xs md:text-xl tracking-[1px] px-[29px] bg-[#D87D4A] hover:bg-[#4C4C4C] duration-300 text-white uppercase"
             >
               See Product
